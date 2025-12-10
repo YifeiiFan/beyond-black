@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond Black – Visual Essay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #111;
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 16px;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
+    h2 { margin-top: 3rem; font-size: 1.6rem; }
+
+    /* --- strip 目录 --- */
+
+    #index-title {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+    }
+
+    .strip {
+      display: block;
+      position: relative;
+      height: 80px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .strip::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1);
+      transition: transform 0.35s ease-out, filter 0.35s ease-out;
+      filter: brightness(0.8);
+    }
+
+    /* 每一条 strip 用一张不同的作品 */
+    .strip1::before { background-image: url("s1.jpg"); }
+    .strip2::before { background-image: url("s2.jpg"); }
+    .strip3::before { background-image: url("s3.jpg"); }
+    .strip4::before { background-image: url("s4.jpg"); }
+    .strip5::before { background-image: url("s5.jpg"); }
+    .strip6::before { background-image: url("s6.jpg"); }
+    .strip7::before { background-image: url("s7.jpg"); }
+
+    .strip-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 18px;
+      background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+      font-size: 0.95rem;
+    }
+
+    .strip-title {
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 500;
+    }
+    .strip-num {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-left: 24px;
+    }
+
+    .strip:hover::before {
+      transform: scale(1.04);
+      filter: brightness(1.05);
+    }
+
+    /* --- section 本体 --- */
+
+    section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .back {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: #666;
+    }
+    .back:hover { color: #000; }
+
+    p { max-width: 720px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Beyond Black</h1>
+    <p><em>Religious solitude, modern loneliness, and the depth of being alone.</em></p>
+
+    <h2 id="index-title">Essays</h2>
+
+    <!-- 七条可以 hover 的 strip 目录 -->
+    <a href="#s1" class="strip strip1">
+      <div class="strip-inner">
+        <div class="strip-title">Beyond Black</div>
+        <div class="strip-num">1</div>
+      </div>
+    </a>
+
+    <a href="#s2" class="strip strip2">
+      <div class="strip-inner">
+        <div class="strip-title">Loneliness &amp; Solitude</div>
+        <div class="strip-num">2</div>
+      </div>
+    </a>
+
+    <a href="#s3" class="strip strip3">
+      <div class="strip-inner">
+        <div class="strip-title">Phone-lit Night</div>
+        <div class="strip-num">3</div>
+      </div>
+    </a>
+
+    <a href="#s4" class="strip strip4">
+      <div class="strip-inner">
+        <div class="strip-title">Worked Black</div>
+        <div class="strip-num">4</div>
+      </div>
+    </a>
+
+    <a href="#s5" class="strip strip5">
+      <div class="strip-inner">
+        <div class="strip-title">Third Presence</div>
+        <div class="strip-num">5</div>
+      </div>
+    </a>
+
+    <a href="#s6" class="strip strip6">
+      <div class="strip-inner">
+        <div class="strip-title">Time &amp; Story</div>
+        <div class="strip-num">6</div>
+      </div>
+    </a>
+
+    <a href="#s7" class="strip strip7">
+      <div class="strip-inner">
+        <div class="strip-title">Depth as Structure</div>
+        <div class="strip-num">7</div>
+      </div>
+    </a>
+
+    <!-- 下面是 7 个 section，本来要放你的正文，现在先占位 -->
+
+    <section id="s1">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>1. Beyond Black</h2>
+      <p>这里粘贴你 Section 1 的英文正文。</p>
+    </section>
+
+    <section id="s2">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>2. Loneliness, Solitude, and “Positive” Being Alone</h2>
+      <p>这里粘贴 Section 2。</p>
+    </section>
+
+    <section id="s3">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>3. Shallow Depths: The Night with the Phone</h2>
+      <p>这里粘贴 Section 3。</p>
+    </section>
+
+    <section id="s4">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>4. Outrenoir as an Analogy for Religious Solitude</h2>
+      <p>这里粘贴 Section 4。</p>
+    </section>
+
+    <section id="s5">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>5. Inner Dialogue and the “Third Presence”</h2>
+      <p>这里粘贴 Section 5。</p>
+    </section>
+
+    <section id="s6">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>6. Time, Story, and the Long View</h2>
+      <p>这里粘贴 Section 6。</p>
+    </section>
+
+    <section id="s7">
+      <a href="#index-title" class="back">← Back to index</a>
+      <h2>7. Depth as Structure</h2>
+      <p>这里粘贴 Section 7。</p>
+    </section>
+  </div>
+</body>
+</html>
